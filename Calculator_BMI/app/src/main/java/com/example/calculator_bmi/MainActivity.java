@@ -36,20 +36,20 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(bmi < 16){
-            BMIresult = "Severely Under Weight";
+            BMIresult = "Thiếu cân nặng ";
         }else if(bmi < 18.5){
-            BMIresult = "Under Weight";
+            BMIresult = "Dưới cân nặng";
         }else if(bmi >= 18.5 && bmi <= 24.9){
-            BMIresult = "Normal Weight";
+            BMIresult = "Cân nặng bình thường";
         }else if (bmi >= 25 && bmi <= 29.9){
-            BMIresult = "Overweight";
+            BMIresult = "Thừa cân";
         }else{
-            BMIresult = "Obese";
+            BMIresult = "Béo phì";
         }
 
 
 
-        calculation = "Result:nn" + bmi + "n" + BMIresult;
+        calculation = "Chỉ số BMI của bạn là:" + bmi + "\n" + BMIresult;
 
 
 
