@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Tài Khoản: "
         app:layout_constraintBottom_toTopOf="@+id/tvMK"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/edTK"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Mật Khẩu: "
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toStartOf="@+id/edMK"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
@@ -45,12 +45,12 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edTK"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toTopOf="@+id/edMK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.824"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.638" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edMK"
         android:layout_width="307dp"
         android:layout_height="40dp"
         android:ems="10"
@@ -71,7 +71,7 @@
         app:layout_constraintVertical_bias="0.353" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đăng nhập"
