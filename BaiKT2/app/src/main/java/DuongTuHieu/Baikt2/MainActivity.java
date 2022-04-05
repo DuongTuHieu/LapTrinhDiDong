@@ -27,8 +27,17 @@ public class MainActivity extends AppCompatActivity {
         String sa = edT.getText().toString();
         int a = Integer.parseInt(sa);
         Float F13 = Float.valueOf((a * 13) / 100);
+        Float F15 = Float.valueOf((a * 13) / 100);
+        Float F20 = Float.valueOf((a * 13) / 100);
         if(B13.isChecked()){
             tV.setText("Số tiền Tip nhân được là: " + F13);
         }
+        if(B15.isChecked()){
+            tV.setText("Số tiền Tip nhân được là: " + F15);
+        }
+        if(B20.isChecked()){
+            tV.setText("Số tiền Tip nhân được là: " + F20);
+        }
+
     }
 }
