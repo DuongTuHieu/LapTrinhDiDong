@@ -4,40 +4,48 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    RadioButton B13,B15,B20;
-    TextView tV;
-    EditText edT;
+    RadioButton r_13, r_15, r_18;
+    Button tinh;
+    EditText bp;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        B13=(RadioButton) findViewById(R.id.B13);
-        B15=(RadioButton) findViewById(R.id.B15);
-        B20=(RadioButton) findViewById(R.id.B20);
-        tV=(TextView) findViewById(R.id.tV);
-        edT=(EditText) findViewById(R.id.edN);
-
+        bp=(EditText) findViewById(R.id.edtN);
+        textView=(TextView) findViewById(R.id.tvkq1);
+        r_13=(RadioButton) findViewById(R.id.radio_13);
+        r_15=(RadioButton) findViewById(R.id.radio_15);
+        r_18=(RadioButton) findViewById(R.id.radio_18);
+        tinh=(Button) findViewById(R.id.btntinh);
+        tinh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                float nhap=Float.parseFloat(bp.getText().toString());
+                if(r_13.isChecked()){
+                    float tt= (float) (nhap*0.13);
+                    textView.setText("Your tip will be $"+tt);
+                    Toast.makeText(MainActivity.this, "Your tip will be $"+tt, Toast.LENGTH_SHORT).show();
+                }
+                else if(r_15.isChecked()){
+                    float tt= (float) (nhap*0.15);
+                    textView.setText("Your tip will be $"+tt);
+                    Toast.makeText(MainActivity.this, "Your tip will be $"+tt, Toast.LENGTH_SHORT).show();
+                }
+                else if(r_18.isChecked()){
+                    float tt= (float) (nhap*0.18);
+                    textView.setText("Your tip will be $"+tt);
+                    Toast.makeText(MainActivity.this, "Your tip will be $"+tt, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
-    public void xulyTip(View v){
-        String sa = edT.getText().toString();
-        int a = Integer.parseInt(sa);
-        Float F13 = Float.valueOf((a * 13) / 100);
-        Float F15 = Float.valueOf((a * 13) / 100);
-        Float F20 = Float.valueOf((a * 13) / 100);
-        if(B13.isChecked()){
-            tV.setText("Số tiền Tip nhân được là: " + F13);
-        }
-        if(B15.isChecked()){
-            tV.setText("Số tiền Tip nhân được là: " + F15);
-        }
-        if(B20.isChecked()){
-            tV.setText("Số tiền Tip nhân được là: " + F20);
-        }
 
-    }
 }
