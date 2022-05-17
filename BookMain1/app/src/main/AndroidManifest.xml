@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BookMain1">
         <activity
+            android:name=".SuaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThemActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
