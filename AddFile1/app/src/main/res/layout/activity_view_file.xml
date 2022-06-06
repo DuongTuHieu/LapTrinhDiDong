@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:background="#03A9F4"
+        android:text="Xem Bài Hát"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:text="Tên Bài Hát" />
+
+    <EditText
+        android:id="@+id/edtnamebh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="15dp"
+
+        android:baselineAligned="false"
+        android:inputType="textCapWords"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnLoadQG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Open"
+        app:backgroundTint="#673AB7" />
+
+    <TextView
+        android:id="@+id/viewqg"
+        android:layout_width="354dp"
+        android:layout_height="177dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="15dp"
+
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Nhập lời bài hát"
+        android:lineSpacingExtra="5sp"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnBackMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="4dp"
+
+        android:background="#A58F4F"
+        android:text="Quay Lại Menu"
+        android:textColor="#fafafa"
+        app:backgroundTint="#732020" />
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="4dp"
+
+        android:text="Thoát"
+        android:textColor="#fafafa"
+        app:backgroundTint="#7E3131" />
+
+
+</LinearLayout>
